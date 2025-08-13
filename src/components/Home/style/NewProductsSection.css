@@ -1,0 +1,189 @@
+.newProducts {
+  display: flex;
+}
+.newProductsStart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.newProductsStartBottom {
+  display: flex;
+}
+.mobileImage {
+  display: none;
+}
+/* PRODUCT */
+.newProduct {
+  display: flex;
+  align-items: center;
+}
+.ps5 {
+  img {
+    width: 350px;
+    height: 340px;
+  }
+  p {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 24px;
+    color: #909090;
+    line-height: 24px;
+  }
+  h2 {
+    font-size: 50px;
+    font-weight: 100;
+  }
+}
+
+.airpodsMax {
+  background-color: #ededed;
+  width: 50%;
+  gap: 32px;
+  img {
+    height: 270px;
+  }
+  h3 {
+    font-weight: 100;
+    font-size: 40px;
+  }
+  p {
+    color: #909090;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+  .newProductContent {
+    padding: 8px;
+  }
+}
+
+.visionPro {
+  background-color: #353535;
+  width: 50%;
+  gap: 8px;
+  color: white;
+  img {
+    height: 190px;
+  }
+  h3 {
+    font-weight: 100;
+    font-size: 44px;
+  }
+  p {
+    color: #909090;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+}
+
+.macbookAir {
+  background-color: #ededed;
+  height: 100%;
+  img {
+    height: 500px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 64px;
+    font-weight: 100;
+  }
+  p {
+    color: #909090;
+    margin: 24px 0px;
+    font-size: 14px;
+  }
+}
+
+.newProductsEnd {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.newProductsEnd .newProductContent {
+  margin-left: 56px;
+}
+
+@media all and (max-width: 768px) {
+  .newProducts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newProductsStart {
+    width: 100%;
+  }
+  .newProduct {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0px;
+  }
+  .newProductsStartBottom {
+    flex-direction: column;
+  }
+  .newProductsEnd {
+    width: 100%;
+    justify-content: center;
+  }
+  p {
+    font-size: 16;
+    line-height: 24px;
+  }
+  .airpodsMax {
+    order: 0;
+    flex-direction: column;
+    img {
+      display: none;
+    }
+    .mobileImage {
+      display: block;
+      width: 200px;
+      height: 200px;
+    }
+    h3 {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  .visionPro {
+    justify-content: center;
+    img {
+      display: none;
+    }
+    .mobileImage {
+      display: block;
+    }
+  }
+  .ps5 {
+    order: 1;
+    align-items: center;
+    gap: 24px;
+    img {
+      display: none;
+    }
+    .mobileImage {
+      display: block;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .macbookAir {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    .newProductContent {
+      margin: 0;
+    }
+    img {
+      display: none;
+    }
+    .mobileImage {
+      display: block;
+      width: 330px;
+      height: 200px;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.productCard {
+  position: relative;
+  background-color: #f6f6f6;
+  max-width: 260px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px 16px;
+  border-radius: 12px;
+}
+.productCardIcon {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+
+  .likeIcon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.productCardImage {
+  img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.productCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    font-size: 16px;
+  }
+  .productCardCost {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.buyNowButton {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 64px;
+  cursor: pointer;
+}

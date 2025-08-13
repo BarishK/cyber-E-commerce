@@ -1,0 +1,37 @@
+.summerSaleSection {
+  background: linear-gradient(75deg, #2e2e2e, #000000);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 448px;
+
+  h2 {
+    font-size: 72px;
+    font-weight: 100;
+  }
+
+  p {
+    color: #787878;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .summerSaleSection {
+    h2 {
+      white-space: nowrap;
+      font-size: 48px;
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+/* HEADER */
+
+header {
+  display: flex;
+  gap: 32px;
+  padding: 16px 160px;
+  align-items: center;
+}
+
+/* HEADER NAV LINK */
+
+.headerLinkGroup {
+  display: flex;
+  gap: 52px;
+}
+
+.headerLinkGroup a {
+  text-decoration: none;
+  color: black;
+  opacity: 30%;
+}
+
+/* HEADER SEARCH INPUT */
+
+.headerSearchInput {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  height: 56px;
+  width: 410px;
+  min-width: 120px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.headerSearchInput input {
+  background-color: red;
+  height: 36px;
+  width: 90%;
+  background-color: #f5f5f5;
+  border: none;
+  outline: none;
+}
+
+.inputIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* HEADER ICONS */
+
+.headerIcons {
+  display: flex;
+  gap: 24px;
+}
+
+.headerIcons a {
+  color: black;
+}
+
+.headerIcon {
+  width: 32px;
+  height: 32px;
+}
+
+/* HEADER CATEGORY */
+
+.categories {
+  color: white;
+  padding: 8px 160px;
+  background-color: #2e2e2e;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  gap: 98px;
+}
+
+.navLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  opacity: 50%;
+}
+
+.navLink .navLinkIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar .navLink:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -49px;
+  top: 10%;
+  height: 80%; /* çizginin uzunluğu */
+  width: 1px; /* çizginin kalınlığı */
+  background-color: white; /* çizgi rengi */
+}
+
+.navbarBars {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+
+.hamburgerMenu {
+  padding: 24px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.hamburgerLinkGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 32px;
+}
+.hamburgerLink {
+  text-decoration: none;
+  color: black;
+  opacity: 50%;
+}
+.hamburgerIcons {
+  display: flex;
+  gap: 32px;
+}
+.hamburgerIcon {
+  color: black;
+  width: 32px;
+  height: 32px;
+}
+.hamburgerMenuActive {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .headerLinks,
+  .headerIcons,
+  .headerSearchInput {
+    display: none;
+  }
+
+  .navbarBars {
+    display: block;
+  }
+
+  .barIconButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  .barIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 88px;
+  }
+
+  /* HEADER CATEGORIES */
+
+  .categories {
+    display: none;
+  }
+}
