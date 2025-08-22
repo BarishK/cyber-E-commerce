@@ -1,14 +1,28 @@
-.popularProduct {
-  /* display: flex;
-  flex-direction: column;
-  max-width: 360px;
-  max-height: 640px; */
+.popularProductsSection {
+  display: flex;
+}
 
-  /* .popularProductImages {
-    position: relative;
-    img {
-      position: absolute;
-      top: 0;
-    }
-  } */
+.popularProduct {
+  text-align: start;
+}
+
+.popularProductContent {
+  h3 {
+    font-size: 34px;
+    font-weight: 100;
+  }
+  p {
+    margin: 14px 0px;
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .popularProductsSection {
+    flex-direction: column;
+    gap: 64px;
+  }
+  .popularProduct {
+    text-align: center;
+  }
 }

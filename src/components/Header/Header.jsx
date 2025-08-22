@@ -50,7 +50,7 @@ export function Header() {
           <a href="/">
             <CiHeart className="headerIcon" />
           </a>
-          <NavLink to="/shoppingCart">
+          <NavLink to="/">
             <CiShoppingCart className="headerIcon" />
           </NavLink>
           <a href="/">

@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import { ProductCard } from "../globalComponents/ProductCard";
 import "./style/ProductsSection.css";
+import { getAllProducts } from "../../api/product";
 
 export function ProductsSection() {
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    const productsData = await getAllProducts();
+    setProducts(productsData);
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <section className="container productsSection">
       <div className="productsTabs">
@@ -15,14 +28,9 @@ export function ProductsSection() {
         <label for="tab3">Featured Products</label>
       </div>
       <div className="products" style={{ marginTop: "32px" }}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.slice(0, 8).map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export function ShopNowBtnDark() {
   const shopNowButtonStyle = {
@@ -14,5 +15,9 @@ export function ShopNowBtnDark() {
     cursor: "pointer",
   };
 
-  return <button style={shopNowButtonStyle}>Shop Now</button>;
+  return (
+    <NavLink to={"/products"}>
+      <button style={shopNowButtonStyle}>Shop Now</button>
+    </NavLink>
+  );
 }

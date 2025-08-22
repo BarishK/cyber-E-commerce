@@ -1,9 +1,9 @@
+import "./style/Products.css";
 import { useEffect, useState } from "react";
-import { ProductCard } from "../globalComponents/ProductCard";
 import { getAllProducts } from "../../api/product";
-import "./style/DiscountProductsSection.css";
+import { ProductCard } from "../globalComponents/ProductCard";
 
-export function DiscountProductsSection() {
+export function Products() {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
@@ -16,15 +16,15 @@ export function DiscountProductsSection() {
   }, []);
 
   return (
-    <section className="container discountProductsSection">
-      <div className="discountProductsHeader">
-        <h3>Discounts up to -50%</h3>
+    <div className="productsPage container">
+      <div className="productContent">
+        <p>Selected Products: {products.slice(0, 12).length}</p>
       </div>
-      <div className="discountProductsCards">
-        {products.slice(9, 13).map((product) => (
+      <div className="productList">
+        {products.slice(0, 12).map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

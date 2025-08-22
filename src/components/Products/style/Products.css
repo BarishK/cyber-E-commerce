@@ -1,0 +1,19 @@
+.productsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+
+.productContent {
+  align-self: flex-start;
+  margin: 16px;
+}
+
+.productList {
+  margin: 64px 0px;
+  max-width: 832px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+}
