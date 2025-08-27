@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export function ShopNowBtnDark() {
   const shopNowButtonStyle = {
+    textAlign: "center",
     padding: "16px 56px",
     width: "186px",
     height: "56px",

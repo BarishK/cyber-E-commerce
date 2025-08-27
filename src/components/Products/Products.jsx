@@ -22,7 +22,7 @@ export function Products() {
       </div>
       <div className="productList">
         {products.slice(0, 12).map((product) => (
-          <ProductCard product={product} key={product.id} />
+          <ProductCard product={product} key={product.id} id={product.id} />
         ))}
       </div>
     </div>

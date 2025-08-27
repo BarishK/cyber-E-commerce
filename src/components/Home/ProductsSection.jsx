@@ -29,7 +29,7 @@ export function ProductsSection() {
       </div>
       <div className="products" style={{ marginTop: "32px" }}>
         {products.slice(0, 8).map((product) => (
-          <ProductCard product={product} key={product.id} />
+          <ProductCard product={product} key={product.id} id={product.id} />
         ))}
       </div>
     </section>
