@@ -16,9 +16,10 @@ export function Product() {
   const getProduct = async () => {
     const productData = await getProductById(productId);
     setProduct(productData);
+    console.log(productData);
   };
 
-  useEffect(() => getProduct(), []);
+  useEffect(async () => await getProduct(), []);
 
   return (
     <div className="productPage container">
@@ -40,7 +41,7 @@ export function Product() {
           </div>
           <div className="productBtnArea">
             <AddToWishlist />
-            <AddToCard />
+            <AddToCard product={product} />
           </div>
           <div className="productInfo">
             <div className="productDelivery">

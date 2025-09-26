@@ -1,0 +1,143 @@
+.paymentPage {
+  display: flex;
+  gap: 96px;
+}
+
+.paymentSummary {
+  padding: 32px 24px;
+  width: 50%;
+  max-height: 700px;
+  border: 1px #ebebeb solid;
+  border-radius: 10px;
+}
+
+.paymentHeader {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.paymentProducts {
+  margin: 24px 0px;
+  .paymentProduct {
+    background-color: gray;
+    height: 72px;
+    width: 100%;
+  }
+}
+
+.summaryInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  p {
+    font-weight: 500;
+  }
+  span {
+    color: #545454;
+  }
+  .paymentTotal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .paymentTotalItem {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+/* PAYMENT */
+
+.payment {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 72px;
+}
+
+/* PAYMENT OPTIONS TAB */
+
+.paymentOptions {
+  display: flex;
+  gap: 40px; /* butonlar arası boşluk */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+  padding: 5px 0;
+  position: relative;
+}
+
+.activePaymentOption {
+  color: #000;
+  font-weight: bold;
+}
+
+.activePaymentOption::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* alt çizgi ile buton arasındaki mesafe */
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* CreditCard */
+
+.creditCard {
+  width: 340px;
+  height: 190px;
+  background-color: rgb(13, 13, 13);
+}
+
+.cardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.cardForm input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.cardForm input:focus {
+  border-color: #333;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+@media all and (max-width: 768px) {
+  .paymentSummary {
+    display: none;
+  }
+  .step {
+    padding: 0px 16px;
+  }
+  .paymentPage {
+    margin: 0px 16px;
+  }
+  .payment {
+    width: 100%;
+  }
+}

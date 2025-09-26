@@ -15,7 +15,7 @@ export function ProductIdProvider({ children }) {
 export function useProductId() {
   const context = useContext(ProductIdContext);
   if (!context) {
-    throw new Error("useProductId must be used within a CountProvider");
+    throw new Error("useProductId must be used within a ProductIdProvider");
   }
   return context;
 }

@@ -1,4 +1,6 @@
-export function AddToCard() {
+import { useCartItems } from "../../context/CartItems";
+
+export function AddToCard({ product }) {
   const addToCardStyle = {
     textAlign: "center",
     padding: "16px 56px",
@@ -11,5 +13,16 @@ export function AddToCard() {
     textWrap: "nowrap",
     cursor: "pointer",
   };
-  return <button style={addToCardStyle}>Add To Card</button>;
+
+  const { setCartItems } = useCartItems();
+
+  const handleClick = () => {
+    setCartItems((prev) => [...prev, product]);
+  };
+
+  return (
+    <button style={addToCardStyle} onClick={handleClick}>
+      Add To Card
+    </button>
+  );
 }

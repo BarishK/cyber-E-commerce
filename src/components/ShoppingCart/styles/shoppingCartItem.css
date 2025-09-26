@@ -1,0 +1,35 @@
+.shoppingCartItem {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  .cartItemImage {
+    text-align: center;
+    color: wheat;
+    background-color: #7e1a1a;
+    width: 90px;
+    height: 90px;
+  }
+  .cartItemContent {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    .cartItemHeader {
+      max-width: 200px;
+      .cartItemName {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      .cartItemId {
+        font-size: 14px;
+        color: #2e2e2e;
+        margin-top: 12px;
+      }
+    }
+    .cartItemPrice {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.shipmentHeader {
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.shipmentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  .shipmentMethod {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d1d1d8;
+    border-radius: 10px;
+    padding: 24px;
+    color: #17183b;
+
+    .shipmentPrice {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+.shipmentMethodLeft {
+  display: flex;
+  gap: 32px;
+}
+
+.shipmentBtnGroup {
+  margin-top: 154px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media all and (max-width: 768px) {
+  .shipmentMain {
+    margin: 0px 16px;
+  }
+  .shipmentDate {
+    margin-left: 40px;
+  }
+}

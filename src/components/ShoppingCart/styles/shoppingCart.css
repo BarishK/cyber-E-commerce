@@ -1,0 +1,90 @@
+.shoppingCartPage {
+  display: flex;
+  gap: 48px;
+  margin: 64px 0px;
+}
+
+.shoppingCart {
+  .cartHeader {
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .cartList {
+    margin-top: 40px;
+  }
+}
+
+.orderSummary {
+  width: 50%;
+  padding: 56px 64px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 12px;
+
+  .orderSummaryForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 24px;
+    .inputItem {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 16px 0px;
+    }
+    input {
+      padding: 16px;
+      border: 1px solid #9f9f9f;
+      border-radius: 12px;
+    }
+  }
+  .subtotalArea {
+    .taxAndShippingCost {
+      margin: 16px 0px;
+      p {
+        margin: 12px 0px;
+        color: #545454;
+        font-weight: 100;
+      }
+    }
+    .subtotalItem {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.checkoutBtn {
+  width: 100%;
+  margin-top: 48px;
+  padding: 16px 56px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .shoppingCartPage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .shoppingCart {
+    width: 80%;
+  }
+  .orderSummary {
+    width: 80%;
+  }
+}

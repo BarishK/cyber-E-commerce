@@ -1,0 +1,43 @@
+.step {
+  margin: 72px 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-size: 12px;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.addressHeader {
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.AddNewAddressBtn {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  margin: 16px 0px;
+  border: none;
+}
+.AddNewAddressBtn:hover {
+  border: 1px solid gray;
+  background-color: black;
+  color: white;
+}
+
+@media all and (max-width: 768px) {
+  .addressesMain {
+    margin: 0px 16px;
+  }
+  .addressesBtnGrp {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+  }
+}
