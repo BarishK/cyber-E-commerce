@@ -8,13 +8,13 @@ export function ProductCard({ product, id }) {
   const { setProductId } = useProductId();
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate(`/product/${id}`);
-    setProductId(id);
-  };
+  // const handleClick = () => {
+  //   navigate(`/product/${id}`);
+  //   setProductId(id);
+  // };
 
   return (
-    <div className="productCard" onClick={handleClick}>
+    <a className="productCard" href={`/product/${id}`}>
       <div className="productCardIcon">
         <CiHeart className="likeIcon" />
       </div>
@@ -27,6 +27,6 @@ export function ProductCard({ product, id }) {
       </div>
 
       <button className="buyNowButton">Buy Now</button>
-    </div>
+    </a>
   );
 }

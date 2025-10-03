@@ -5,8 +5,10 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function ShoppingCart() {
-  const { cartItems, setCartItems } = useCartItems();
+  const { cartItems } = useCartItems();
   const navigate = useNavigate();
+
+  console.log(cartItems);
 
   return (
     <div className="container">
@@ -15,11 +17,11 @@ export function ShoppingCart() {
           <div className="cartHeader">
             <h3>Shopping Cart</h3>
           </div>
-          <div className="cartList">
+          {/* <div className="cartList">
             {cartItems.map((item, index) => {
-              <ShoppingCartItem item={item} key={index} />;
+              return <ShoppingCartItem item={item} key={index} />;
             })}
-          </div>
+          </div> */}
         </div>
         <div className="orderSummary">
           <div className="orderSummaryHeader">

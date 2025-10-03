@@ -8,15 +8,16 @@ import { useProductId } from "../../context/productId";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { TbBuildingStore } from "react-icons/tb";
 import { SiAdguard } from "react-icons/si";
+import { useParams } from "react-router-dom";
 
 export function Product() {
-  const { productId } = useProductId();
+  const { id } = useParams();
+  // const { productId } = useProductId();
   const [product, setProduct] = useState([]);
 
   const getProduct = async () => {
-    const productData = await getProductById(productId);
+    const productData = await getProductById(id);
     setProduct(productData);
-    console.log(productData);
   };
 
   useEffect(async () => await getProduct(), []);

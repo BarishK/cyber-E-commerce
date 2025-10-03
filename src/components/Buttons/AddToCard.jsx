@@ -14,11 +14,13 @@ export function AddToCard({ product }) {
     cursor: "pointer",
   };
 
-  const { setCartItems } = useCartItems();
+  const { cartItems, setCartItems } = useCartItems();
 
   const handleClick = () => {
     setCartItems((prev) => [...prev, product]);
   };
+
+  console.log(cartItems);
 
   return (
     <button style={addToCardStyle} onClick={handleClick}>

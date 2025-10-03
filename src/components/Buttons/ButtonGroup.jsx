@@ -30,10 +30,6 @@ export function ButtonGroup({ firstButton, secondButton, page }) {
 
   const navigate = useNavigate();
 
-  const backToAddress = () => {
-    navigate("/addresses");
-  };
-
   const handleBackClick = () => {
     if (page === "address") {
       navigate("/shoppingCart");
