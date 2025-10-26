@@ -9,6 +9,7 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { TbBuildingStore } from "react-icons/tb";
 import { SiAdguard } from "react-icons/si";
 import { useParams } from "react-router-dom";
+import { useCartItems } from "../../context/CartItems";
 
 export function Product() {
   const { id } = useParams();
@@ -20,7 +21,15 @@ export function Product() {
     setProduct(productData);
   };
 
-  useEffect(async () => await getProduct(), []);
+  const { cartItems, setCartItems } = useCartItems();
+
+  const handleClick = () => {
+    setCartItems((prev) => [...prev, product]);
+  };
+
+  useEffect(() => {
+    getProduct();
+  }, []);
 
   return (
     <div className="productPage container">
@@ -42,7 +51,7 @@ export function Product() {
           </div>
           <div className="productBtnArea">
             <AddToWishlist />
-            <AddToCard product={product} />
+            <AddToCard handleClick={handleClick} />
           </div>
           <div className="productInfo">
             <div className="productDelivery">

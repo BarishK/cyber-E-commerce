@@ -75,14 +75,15 @@
 @media all and (max-width: 768px) {
   .container {
     margin: 0;
-    padding: 0;
+    padding: 0px;
   }
   .shoppingCartPage {
     flex-direction: column;
     align-items: center;
   }
   .shoppingCart {
-    width: 80%;
+    padding: 0px 16px;
+    width: 100%;
   }
   .orderSummary {
     width: 80%;

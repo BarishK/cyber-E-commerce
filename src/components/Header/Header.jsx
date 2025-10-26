@@ -77,9 +77,9 @@ export function Header() {
           <a href="/">
             <CiHeart className="hamburgerIcon" />
           </a>
-          <a href="/">
+          <NavLink to="/shoppingCart">
             <CiShoppingCart className="hamburgerIcon" />
-          </a>
+          </NavLink>
           <a href="/">
             <IoPersonOutline className="hamburgerIcon" />
           </a>

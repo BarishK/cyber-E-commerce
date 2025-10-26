@@ -1,14 +1,11 @@
 import { ShoppingCartItem } from "./ShoppingCartItem";
 import "./styles/shoppingCart.css";
 import { useCartItems } from "../../context/CartItems";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function ShoppingCart() {
   const { cartItems } = useCartItems();
   const navigate = useNavigate();
-
-  console.log(cartItems);
 
   return (
     <div className="container">
@@ -17,11 +14,15 @@ export function ShoppingCart() {
           <div className="cartHeader">
             <h3>Shopping Cart</h3>
           </div>
-          {/* <div className="cartList">
-            {cartItems.map((item, index) => {
-              return <ShoppingCartItem item={item} key={index} />;
-            })}
-          </div> */}
+          <div className="cartList">
+            {cartItems && cartItems.length > 0 ? (
+              cartItems.map((item, index) => (
+                <ShoppingCartItem item={item} key={index} />
+              ))
+            ) : (
+              <p>Your cart is empty</p>
+            )}
+          </div>
         </div>
         <div className="orderSummary">
           <div className="orderSummaryHeader">

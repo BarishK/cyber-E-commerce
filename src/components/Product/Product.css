@@ -86,30 +86,29 @@
 @media all and (max-width: 768px) {
   .productPage {
     margin: 0px;
-    padding: 16px;
   }
   .product {
     flex-direction: column;
+    padding: 0px 16px;
   }
   .productImage img {
     width: 100%;
+    height: 70%;
   }
   .productContent {
     width: 100%;
-    padding: 0;
     margin: 0;
   }
   .productSizeBoxes {
     gap: 4px;
   }
-  .productDesc {
-    padding: 0;
-  }
+
   .productBtnArea {
     flex-direction: column;
     width: 100%;
   }
   .productInfo {
+    margin: 16px 0px;
     text-align: center;
     .productDelivery {
       flex-direction: column;

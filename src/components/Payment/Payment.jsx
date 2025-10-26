@@ -2,9 +2,12 @@ import { FaShippingFast } from "react-icons/fa";
 import "./payment.css";
 import { useState } from "react";
 import { ButtonGroup } from "../Buttons/ButtonGroup";
+import { useCartItems } from "../../context/CartItems";
+import { ShoppingCartItem } from "../ShoppingCart/ShoppingCartItem";
 
 export function Payment() {
   const [activeTab, setActiveTab] = useState("credit");
+  const { cartItems } = useCartItems();
 
   const paymentTabs = [
     { id: "credit", label: "Credit Card" },
@@ -29,9 +32,13 @@ export function Payment() {
             <span className="paymentHeader">Summary</span>
           </div>
           <div className="paymentProducts">
-            <div className="paymentProduct"></div>
-            <div className="paymentProduct"></div>
-            <div className="paymentProduct"></div>
+            {cartItems && cartItems.length > 0 ? (
+              cartItems.map((item, index) => (
+                <ShoppingCartItem item={item} key={index} />
+              ))
+            ) : (
+              <p>Your cart is empty</p>
+            )}
           </div>
           <div className="summaryInformation">
             <div>

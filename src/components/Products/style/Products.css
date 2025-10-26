@@ -19,6 +19,12 @@
 }
 
 @media all and (max-width: 768px) {
+  .productContent {
+    padding: 16px;
+  }
+  .productList {
+    padding: 0px 8px;
+  }
   .productList {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
